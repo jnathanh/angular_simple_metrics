@@ -1,0 +1,27 @@
+html,body{
+	height:100%;
+	width:100%;
+}
+/*Main View Frame*/
+.mainViewFrame{
+	height:100%;
+	width:100%;
+}
+/*animations*/
+.ng-enter{
+	  -webkit-transition:0.5s linear all;
+  -moz-transition:0.5s linear all;
+  -o-transition:0.5s linear all;
+  transition:0.5s linear all;
+  opacity:0;
+	background: blue;
+}
+/*Home Page*/
+.mainTitle{
+	position: relative;
+	text-align: center;
+	top: calc(33% - 20vmin/2);
+	font-size: 20vmin;
+	font-weight: bold;
+	font-family: fantasy;
+}
