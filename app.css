@@ -1,27 +1,50 @@
 html,body{
 	height:100%;
 	width:100%;
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
+/*div{
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+*/
+
 /*Main View Frame*/
-.mainViewFrame{
+.page-content{
 	height:100%;
 	width:100%;
 }
-/*animations*/
-.ng-enter{
-	  -webkit-transition:0.5s linear all;
-  -moz-transition:0.5s linear all;
-  -o-transition:0.5s linear all;
-  transition:0.5s linear all;
-  opacity:0;
-	background: blue;
-}
+
 /*Home Page*/
 .mainTitle{
-	position: relative;
+	position: fixed;
+	width: 100%;
 	text-align: center;
-	top: calc(33% - 20vmin/2);
-	font-size: 20vmin;
+	top: calc(33% - 13vw/2);
+	font-size: 9vw;
 	font-weight: bold;
-	font-family: fantasy;
 }
+
+/*animations*/
+.page-content.ng-leave, .page-content.ng-enter {
+  -webkit-transition:all ease 1s;
+  transition:all ease 1s;
+}
+.page-content.ng-enter {
+  opacity:0;
+}
+.page-content.ng-enter-active {
+  opacity:1;
+}
+.page-content.ng-leave {
+  opacity:1;
+}
+.page-content.ng-leave-active {
+  opacity:0;
+}
+
+
+
+
+
+
+
