@@ -41,6 +41,13 @@
 			function($routeParams, homeData,$scope){
 				$scope.title=homeData.title;
 				this.title=homeData.title;
+				$scope.user = {
+					username:"",
+					password:""
+				}
+				$scope.login = function(){
+					console.log($scope.user);
+				}
 			}
 		]
 	);
