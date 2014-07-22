@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="app.css">
+
+</head>
+<body ng-app="SimpleMetrics">
+	<a href="#/home">Home View</a>
+	<a href="#/goals">Goals View</a>
+	<div ng-view class="page-content"></div>
+</body>
+	<script src="database.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="app.js"></script>
+</html>

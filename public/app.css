@@ -1,0 +1,83 @@
+html,body{
+	height:100%;
+	width:100%;
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	color: #383838;
+}
+/*
+Blue Color Scheme:
+	blue: #005AA4;
+	black: #000000;
+	dark-grey: #575757;
+	light-grey: #B0B0B0;
+	white: #FFFFFF;
+
+Red Color Scheme:
+	Red: #EF0000;
+	black: #383838;
+	dark-grey: #777777;
+	light-grey: #C7C7C7;
+	white: #F2F2F2;
+*/
+
+/*Main View Frame*/
+.page-content{
+	height:100%;
+	width:100%;
+}
+
+/*Home Page*/
+.mainTitle{
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	top: calc(33% - 13vw/2);
+	font-size: 9vw;
+	font-weight: bold;
+}
+
+.login-box{
+	position: fixed;
+	/*width: calc(100%/3);*/
+	width: 100%;
+	/*margin: 0px calc(100%/3);*/
+	top: calc(66% - 33vh/2);
+	margin: auto;
+}
+.login-box input{
+	width:300px;
+	margin:auto;
+}
+.login-box button {
+	position: relative;
+	left: calc(50% - 100px/2);
+	width: 100px;
+	background: #383838;
+	color: #F2F2F2;
+	border: #383838;
+}
+
+/*animations*/
+.page-content.ng-leave, .page-content.ng-enter {
+  -webkit-transition:all ease 1s;
+  transition:all ease 1s;
+}
+.page-content.ng-enter {
+  opacity:0;
+}
+.page-content.ng-enter-active {
+  opacity:1;
+}
+.page-content.ng-leave {
+  opacity:1;
+}
+.page-content.ng-leave-active {
+  opacity:0;
+}
+
+
+
+
+
+
+
