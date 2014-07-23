@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('SimpleMetrics',['ngAnimate','ngRoute']);
+	var app = angular.module('SimpleMetrics',['ngAnimate','ngRoute','ngResource']);
 
 	app.config(
 		[
