@@ -48,7 +48,7 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-app.use(favicon(__dirname + '/public/stopwatch_icon.png'));
+app.use(favicon(__dirname + '/public/images/stopwatch_icon.png'));
 // app.use(express.favicon());
 app.use(morgan('dev')); 					// log every request to the console
 // app.use(express.logger('dev'));

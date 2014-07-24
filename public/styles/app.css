@@ -44,9 +44,12 @@ Red Color Scheme:
 	top: calc(66% - 33vh/2);
 	margin: auto;
 }
-.login-box input{
+.login-box input, .login-box input{
 	width:300px;
 	margin:auto;
+}
+.message{
+	text-align: center;
 }
 .login-box button {
 	position: relative;
