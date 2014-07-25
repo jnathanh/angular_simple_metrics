@@ -2,12 +2,13 @@
 <!-- <form name="login-form" role="form" class="login-box">
 	<input placeholder="Username" type="text" ng-model="username"/>
 </form> -->
-<form role="form" name="form" class="login-box" novalidate>
-  <input type="text" class="form-control" id="username" placeholder="Username" ng-model="user.username">
+<form role="form" name="form" class="login-box" ng-hide="user" novalidate>
+  <input id="username" type="text" class="form-control" placeholder="Username" ng-model="tempUser.username" autofocus>
   <br>
-  <input type="password" class="form-control" id="password" placeholder="Password" ng-model="user.password">
+  <input id="password" type="password" class="form-control" placeholder="Password" ng-model="tempUser.password">
   <br>
-  <button type="submit" class="btn btn-default" ng-click="login()" ng-disabled="form.$invalid || isUnchanged(user)">Login</button>
+  <button type="submit" class="btn btn-default" ng-click="login()" ng-disabled="form.$invalid || isUnchanged(tempUser)">Login</button>
   <br ng-show="message">
   <div ng-show="message" class="message">{{message}}</div>
 </form>
+{{user}}

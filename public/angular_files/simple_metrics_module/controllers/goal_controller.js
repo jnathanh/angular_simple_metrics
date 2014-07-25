@@ -4,10 +4,10 @@
 	app.controller(
 		'GoalController',
 		[
-			'GoalData',
+			'Database',
 			'$scope',
-			function(goalData,$scope){
-				$scope.goals = goalData.goals;
+			function(Database,$scope){
+				$scope.goals = Database.table('GoalData').goals;
 
 			}
 		]
