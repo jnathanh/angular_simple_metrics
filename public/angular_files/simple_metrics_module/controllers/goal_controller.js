@@ -6,9 +6,10 @@
 		[
 			'Database',
 			'$scope',
-			function(Database,$scope){
-				$scope.goals = Database.table('GoalData').goals;
-
+			'$rootScope',
+			function(Database,$scope,$rootScope){
+				// $scope.goals = Database.table('GoalData').goals;
+				$scope.goals = $rootScope['user'] ? $rootScope['user']['goals'] : null;
 			}
 		]
 	);

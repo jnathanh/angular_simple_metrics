@@ -13,14 +13,24 @@ var methodOverride	= require('method-override');
 var expressSession	= require('express-session');
 var errorHandler	= require('errorhandler');
 
+var User = require('./server/database.js');
+
+
+
 //==================================================================
 // Define the strategy to be used by PassportJS
 passport.use(new LocalStrategy(
   function(username, password, done) {
-    if (username === "admin" && password === "admin") // stupid example
-      return done(null, {name: "admin"});
-
-    return done(null, false, { message: 'Incorrect username.' });
+    var user;
+    User.findOne({username:username},function(err, res){
+          user = res || false;
+          if(user){
+            if(password==user['password']){
+              return done(null, user, {message:'Welcome'+user['username']});
+            }
+          }
+          return done(null,false, {message:'No match for the provided username and password'});
+    });
   }
 ));
 
